@@ -10,11 +10,19 @@ import Subscribe from "../subscribe/Subscribe";
 
 const Footer = () => {
   return (
-    <div>
-      <div className=" bg-gradient-to-r from-[#000000] via-[#005F57] to-[#5b194d] pt-32 relative">
+    <div className=" bg-gradient-to-r from-[#000000] via-[#005F57] to-[#5b194d] relative">
+      <div
+        className=" pt-32"
+        style={{
+          backgroundImage: `url(${bgBall})`,
+          backgroundPosition: "right",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.7,
+        }}
+      >
         <Subscribe />
         <div className="container mx-auto">
-          <div className="p-10 grid md:grid-cols-4 gap-4 text-white">
+          <div className="p-10 grid md:grid-cols-4 gap-4 opacity-100 text-white">
             <aside>
               <img className="mb-3" src={logo} alt="" />
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>

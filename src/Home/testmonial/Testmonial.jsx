@@ -1,6 +1,14 @@
 import React from "react";
 import right from "../../assets/right.png";
 import middle from "../../assets/middle.png";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "./Testmonial.css";
+// import required modules
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import { SwiperSlide, Swiper } from "swiper/react";
+import TestmonialSlider from "../../component/TestmonialSlider";
 
 const Testmonial = () => {
   return (
@@ -12,7 +20,40 @@ const Testmonial = () => {
         freedom to change his religion or belief, and freedom, either alone or in community with
         others and in public or private
       </p>
-      <div className="md:flex items-center justify-center md:gap-4 lg:gap-10 py-10 text-white">
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <TestmonialSlider />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TestmonialSlider image={middle} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <TestmonialSlider image={right} />
+        </SwiperSlide>
+      </Swiper>
+    </div>
+  );
+};
+
+export default Testmonial;
+
+{
+  /* <div className="md:flex items-center justify-center md:gap-4 lg:gap-10 py-10 text-white">
         <div className="card w-[450px] h-[273px] bg-[#646363]">
           <div className="card-body items-center text-center">
             <div className="avatar flex flex-col items-center">
@@ -76,9 +117,5 @@ const Testmonial = () => {
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default Testmonial;
+      </div> */
+}

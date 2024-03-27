@@ -11,7 +11,12 @@ const About = () => {
       <h4 className="text-[#005F57] mt-8 text-center font-bold">About</h4>
       <div
         className="lg:flex py-10 text-white container mx-auto text-center"
-        style={{ backgroundImage: `url(${bg})` }}
+        style={{
+          backgroundImage: `url(${bg})`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "500px",
+        }}
       >
         <div>
           <h2 className="text-4xl mb-3">What We Do</h2>

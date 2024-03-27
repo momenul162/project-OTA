@@ -22,14 +22,19 @@ const Pricing = () => {
         freedom to change his religion or belief, and freedom, either alone or in community with
         others and in public or private
       </p>
-      <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className="mySwiper">
-        <SwiperSlide className="bg-gradient-to-r from-stone-500 via-[#1977A9] to-stone-500">
+      <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper w-[450px]"
+      >
+        <SwiperSlide className="h-[700px] bg-gradient-to-r from-stone-500 via-[#1977A9] to-stone-500">
           <PricingCopm price={"20, 0000"} name="OTA White Label" />
         </SwiperSlide>
-        <SwiperSlide className="bg-gradient-to-r from-stone-500 via-[#1977A9] to-stone-500">
+        <SwiperSlide className="h-[700px] bg-gradient-to-r from-stone-500 via-[#1977A9] to-stone-500">
           <PricingCopm price={"30,0000"} name="Full OTA Portal" />
         </SwiperSlide>
-        <SwiperSlide className="bg-gradient-to-r from-stone-500 via-[#1977A9] to-stone-500">
+        <SwiperSlide className="h-[700px] bg-gradient-to-r from-stone-500 via-[#1977A9] to-stone-500">
           <PricingCopm price={"20,0000"} name="OTA White Label" />
         </SwiperSlide>
       </Swiper>
